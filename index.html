@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>姚璐 YAO LU | 视觉设计 · 插画 · 漫画</title>
+<meta name="description" content="姚璐的个人作品集，收录平面海报、Bilibili 视频封面、插画、漫画与视频剪辑作品。" />
+<meta name="theme-color" content="#111111" />
+<link rel="icon" href="assets/img/work/posters/poster-03.jpg" />
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/bdo-grotesk-variable.woff2" crossorigin />
+<link rel="preload" as="image" href="assets/img/video/ai-portfolio.jpg" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- =====================  PRELOADER / INTRO CURTAIN  ===================== -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__panel"></div>
+  <div class="intro__counter"><span id="introCount">00</span></div>
+</div>
+
+<!-- ==============================  HEADER  =============================== -->
+<header class="site-head" id="siteHead">
+  <div class="site-head__inner">
+    <a class="brand" href="#top" aria-label="Home">
+      <span class="brand__mark" id="brandMark"></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list" id="navList"></ul>
+    </nav>
+
+    <div class="head-badge" id="headBadge">
+      <img class="head-badge__img" id="badgeImage" alt="" />
+      <div class="head-badge__body">
+        <p class="head-badge__eyebrow" id="badgeTitle"></p>
+        <p class="head-badge__name" id="badgeName"></p>
+        <p class="head-badge__role" id="badgeRole"></p>
+      </div>
+      <span class="head-badge__glyph" aria-hidden="true"></span>
+    </div>
+
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menuOverlay">
+      <span class="menu-btn__label">菜单</span>
+      <span class="menu-btn__bars" aria-hidden="true"><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+  <div class="menu-overlay__inner">
+    <ul class="menu-overlay__list" id="menuList"></ul>
+    <div class="menu-overlay__foot">
+      <p class="menu-overlay__eyebrow">联系姚璐</p>
+      <a class="menu-overlay__mail" id="menuMail" href="#"></a>
+      <a class="menu-overlay__phone" id="menuPhone" href="#"></a>
+    </div>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ==============================  HERO  ============================== -->
+  <section class="hero" id="heroSection">
+    <div class="hero__media">
+      <video class="hero__video" id="heroVideo" muted loop playsinline autoplay preload="auto"></video>
+      <img class="hero__img" id="heroImage" alt="" />
+      <div class="hero__scrim" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero__grid" aria-hidden="true">
+      <span class="plus" style="--x:31%;--y:54%"></span>
+      <span class="plus" style="--x:64%;--y:43%"></span>
+      <span class="plus" style="--x:83%;--y:59%"></span>
+      <span class="plus" style="--x:48%;--y:62%"></span>
+      <span class="plus" style="--x:9%;--y:47%"></span>
+    </div>
+
+    <div class="hero__body">
+      <div class="hero__left">
+        <p class="hero__lead reveal-line" id="heroLead"></p>
+        <a class="link-underline reveal-line" id="heroCta" href="#about">
+          <span></span><i class="arrow" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <ul class="hero__disciplines" id="heroDisciplines"></ul>
+
+      <div class="hero__wordmark">
+        <span id="heroWordmark"></span>
+      </div>
+
+      <div class="hero__credits">
+        <span data-brand-year></span>
+        <span class="tick" aria-hidden="true"></span>
+        <span data-brand-version></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================  AI VIDEO  =========================== -->
+  <section class="ai-video" id="ai-video">
+    <div class="wrap">
+      <div class="sec-head sec-head--dark">
+        <span class="sec-head__index" data-index="01"></span>
+        <span class="sec-head__label" data-label="AI Video"></span>
+        <span class="sec-head__year" data-brand-year></span>
+      </div>
+      <div class="editing__grid" id="aiVideoGrid"></div>
+    </div>
+  </section>
+
+  <!-- =============================  VIDEO EDITING  ======================= -->
+  <section class="editing" id="editing">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index" data-index="02"></span>
+        <span class="sec-head__label" data-label="Video Editing"></span>
+        <span class="sec-head__year" data-brand-year></span>
+      </div>
+      <div class="editing__grid" id="editingGrid"></div>
+    </div>
+  </section>
+
+  <!-- ==============================  ABOUT  ============================= -->
+  <section class="about section--paper angle-top" id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index" data-index="03"></span>
+        <span class="sec-head__label" data-label="About Us"></span>
+        <span class="sec-head__year" data-brand-year></span>
+      </div>
+
+      <h2 class="statement" id="aboutStatement" data-reveal="lines"></h2>
+
+      <div class="about__grid">
+        <figure class="about__figure" data-reveal="img">
+          <img id="aboutImage" alt="" />
+        </figure>
+
+        <div class="about__notes" id="aboutNotes"></div>
+
+        <div class="about__side">
+          <a class="link-underline" id="aboutCta" href="#portfolio">
+            <span></span><i class="arrow" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticker clients" id="clientsTicker" aria-label="Selected clients">
+      <div class="ticker__track" id="clientsTrack"></div>
+    </div>
+  </section>
+
+  <!-- ============================  PORTFOLIO  =========================== -->
+  <section class="portfolio" id="portfolio">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index" data-index="04"></span>
+        <span class="sec-head__label" data-label="Portfolio"></span>
+        <span class="sec-head__year" data-brand-year></span>
+      </div>
+
+      <div class="portfolio__grid">
+        <aside class="portfolio__left">
+          <h3 class="portfolio__title" id="portfolioTitle" data-reveal="text"></h3>
+          <a class="link-underline" id="portfolioCta" href="#contact">
+            <span></span><i class="arrow" aria-hidden="true"></i>
+          </a>
+        </aside>
+
+        <div class="portfolio__cards" id="portfolioCards"></div>
+
+        <aside class="portfolio__right">
+          <a class="see-all" id="seeAll" href="#archive">
+            <img id="seeAllImage" alt="" />
+            <span id="seeAllLabel"></span>
+          </a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================  SERVICES  ============================ -->
+  <section class="services angle-band" id="services">
+    <div class="wrap">
+      <div class="sec-head sec-head--dark">
+        <span class="sec-head__index" data-index="05"></span>
+        <span class="sec-head__label" data-label="Premium Services"></span>
+        <span class="sec-head__year" data-brand-year></span>
+      </div>
+
+      <div class="services__intro">
+        <figure class="services__figure" data-reveal="img">
+          <img id="servicesImage" alt="" />
+        </figure>
+        <h2 class="statement statement--dark" id="servicesStatement" data-reveal="lines"></h2>
+      </div>
+
+      <div class="services__cta">
+        <a class="link-underline link-underline--light" id="servicesCta" href="#pricing">
+          <span></span><i class="arrow" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="services__list" id="servicesList"></div>
+    </div>
+  </section>
+
+  <!-- =============================  PRICING  ============================ -->
+  <section class="pricing angle-top" id="pricing">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index" data-index="06"></span>
+        <span class="sec-head__label" data-label="Pricing"></span>
+        <span class="sec-head__year" data-brand-year></span>
+      </div>
+      <div class="pricing__grid" id="pricingGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===========================  ILLUSTRATION  ========================= -->
+  <section class="illustrations" id="illustrations">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index" data-index="07"></span>
+        <span class="sec-head__label" data-label="Illustration"></span>
+        <span class="sec-head__year" data-brand-year></span>
+      </div>
+      <div class="illustrations__grid" id="illustrationsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============================  ARCHIVE  ============================= -->
+  <section class="archive" id="archive">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index" data-index="08"></span>
+        <span class="sec-head__label" data-label="Archive"></span>
+        <span class="sec-head__year" data-brand-year></span>
+      </div>
+      <p class="comics__note" id="comicsNote"></p>
+      <div class="comics__grid" id="archiveList"></div>
+    </div>
+  </section>
+
+  <!-- =============================  STATS  ============================== -->
+  <section class="stats" id="stats">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index" data-index="09"></span>
+        <span class="sec-head__label" data-label="Stats"></span>
+        <span class="sec-head__year" data-brand-year></span>
+      </div>
+      <div class="stats__grid" id="statsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============================  ARTICLES  ============================ -->
+  <section class="articles" id="articles">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index" data-index="10"></span>
+        <span class="sec-head__label" data-label="Article"></span>
+        <span class="sec-head__year" data-brand-year></span>
+      </div>
+      <div class="articles__grid" id="articlesGrid"></div>
+    </div>
+  </section>
+
+  <!-- ==============================  FAQ  =============================== -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index" data-index="11"></span>
+        <span class="sec-head__label" data-label="Frequently Asked Questions"></span>
+        <span class="sec-head__year" data-brand-year></span>
+      </div>
+      <div class="faq__grid">
+        <a class="showreel" id="showreel" href="#">
+          <img id="showreelImage" alt="" />
+          <span class="showreel__bar">
+            <span class="showreel__play" id="showreelLabel"></span>
+            <span class="showreel__caption" id="showreelCaption"></span>
+          </span>
+        </a>
+        <ul class="faq__list" id="faqList"></ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==============================  FOOTER  ============================== -->
+<footer class="footer angle-band" id="contact">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__left">
+        <h2 class="footer__heading" id="footerHeading" data-reveal="text"></h2>
+        <a class="footer__mail" id="footerMail" href="#"></a>
+        <a class="footer__phone" id="footerPhone" href="#"></a>
+        <a class="link-underline link-underline--light" id="footerCta" href="#">
+          <span></span><i class="arrow" aria-hidden="true"></i>
+        </a>
+        <div class="footer__pluses" aria-hidden="true">
+          <span class="plus plus--light" style="--x:38%;--y:50%"></span>
+          <span class="plus plus--light" style="--x:68%;--y:50%"></span>
+          <span class="plus plus--light" style="--x:97%;--y:50%"></span>
+        </div>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <ul id="footerNav"></ul>
+      </nav>
+    </div>
+    <div class="footer__wordmark">
+      <span id="footerWordmark"></span>
+    </div>
+    <p class="footer__legal"><span data-brand-year></span></p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lightboxClose" type="button" aria-label="关闭"></button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" type="button" aria-label="上一张"></button>
+  <figure class="lightbox__stage">
+    <img id="lightboxImage" alt="" />
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+  <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" type="button" aria-label="下一张"></button>
+  <p class="lightbox__count" id="lightboxCount"></p>
+</div>
+
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
